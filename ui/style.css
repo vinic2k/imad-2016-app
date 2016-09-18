@@ -1,7 +1,11 @@
 body {
     font-family: sans-serif;
     background-color: lightgrey;
+    background-image: url("/ui/background.jpg");
     margin-top: 75px;
+    background-repeat: no-repeat;
+    background-size: cover;
+
 }
 
 .center {
@@ -12,14 +16,22 @@ body {
     font-size: 300%;
 }
 
+.white {
+  color: white;
+}
+
+.yellow {
+  color: yellow;
+}
+
 .bold {
     font-weight: bold;
 }
 
 .img-medium {
-    height: 200px;
+    height: 300px;
 }
 
 .background-image {
-  max-width: inherit;;
+  max-width: 1000px;
 }
