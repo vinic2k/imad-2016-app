@@ -1,8 +1,10 @@
 body {
     font-family: sans-serif;
-    margin-top: 60px;
-    background-color: #e8ffff;
-
+    background-color: lightgrey;
+    background-image: url("/ui/background.jpg");
+    margin-top: 75px;
+    background-repeat: no-repeat;
+    background-size: cover;
 
 }
 
@@ -33,11 +35,3 @@ body {
 .background-image {
   max-width: 1000px;
 }
-
-.container {
-  max-width: 800px;
-  margin: 0 auto;
-  color: #443939;
-  font-family: sans-serif;
-  padding-left: 20px;
-  padding-right: 20px;
