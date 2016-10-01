@@ -7,4 +7,4 @@ element.innerHTML = 'New Value';
 var img = document.getElementById('vini');
 img.onClick = function (){
     img.style.marginLeft = '100px';
-}
+};
