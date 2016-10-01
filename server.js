@@ -146,6 +146,10 @@ app.get('/ui/home.css', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'home.css'));
 });
 
+app.get('/ui/main.js', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui', 'main.js'));
+});
+
 app.get('/ui/vini.png', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'vini.png'));
 });
