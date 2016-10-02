@@ -26,6 +26,10 @@ body {
     font-weight: bold;
 }
 
+.brown {
+  color: brown;
+}
+
 .img-medium {
     height: 300px;
 }
