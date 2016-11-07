@@ -25,8 +25,7 @@ button.onclick = function () {
 };
 
 // Submit name
-var nameInput = document.getElementById('name');
-var name = nameInput.value;
+
 var submit = document.getElementById('submit_btn');
 submit.onclick = function (){
   // Create a request object
@@ -50,7 +49,9 @@ submit.onclick = function (){
     } 
     // Not done yet
   };
-  
+  // Submit name
+  var nameInput = document.getElementById('name');
+  var name = nameInput.value;
   // Make the request
   request.open('GET', 'http://vinic2k.imad.hasura-app.io/submit-name?name' + name, true);
   request.send(null);    
