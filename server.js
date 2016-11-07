@@ -161,7 +161,7 @@ app.get('/ui/vini.png', function (req, res) {
 });
 
 var names = [];
-app.get('/submit-name/:name', fuction(req, res) {
+app.get('/submit-name/:name', function (req, res) {
     // Get the name from the request
     var name = req.params.name;
     
