@@ -36,10 +36,10 @@ submit.onclick = function (){
         // Take some action
         if (request.status === 200) {
             // Capture the list of names and render it as a list.
-            var names =request.responseText;
+            var names = request.responseText;
             names = JSON.parse(names);
             var list = '';
-            for (i=0; i< names.length; i++){
+            for (var i=0; i< names.length; i++) {
                 list += '<li>' + names[i] + '</li>'
             }
             var ul = document.getElementById('namelist');
@@ -51,7 +51,7 @@ submit.onclick = function (){
   var nameInput = document.getElementById('name');
   var name = nameInput.value;
   // Make the request
-  request.open('GET', 'http://vinic2k.imad.hasura-app.io/submit-name?name' + name, true);
+  request.open('GET', 'http://vinic2k.imad.hasura-app.io/submit-name?name=' + name, true);
   request.send(null);    
 
 };
