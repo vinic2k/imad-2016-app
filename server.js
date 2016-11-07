@@ -14,84 +14,6 @@ var config = {
 var app = express();
 app.use(morgan('combined'));
 
-var articles = {
-'article-one': {
-  title: 'Article One | Vineesh KP',
-  heading: 'Article One',
-  date: 'Sep 5 2016',
-  content:`
-   <p>
-     In this article we are going to talk about server side programming to make urls.
-   </p>
-   <p>
-     In this article we are going to talk about server side programming to make urls.
-   </p>
-   <p>
-     In this article we are going to talk about server side programming to make urls.
-   </p>
-   <p>
-     In this article we are going to talk about server side programming to make urls.
-   </p>
-   <p>
-     Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-   </p>
-   <p>
-     Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-   </p>`
- },
-
- 'article-two': {
-   title: 'Article Two | Vineesh KP',
-   heading: 'Article Two',
-   date: 'Sep 10 2016',
-   content:`
-    <p>
-      In this article we are going to talk about server side programming to make urls.
-    </p>
-    <p>
-      In this article we are going to talk about server side programming to make urls.
-    </p>
-    <p>
-      In this article we are going to talk about server side programming to make urls.
-    </p>
-    <p>
-      In this article we are going to talk about server side programming to make urls.
-    </p>
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-    </p>
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-    </p>`
-  },
-
-
-  'article-three': {
-    title: 'Article Three | Vineesh KP',
-    heading: 'Article Three',
-    date: 'Sep 15 2016',
-    content:`
-    <p>
-      In this article we are going to talk about client side javascript.In this article we are going to talk about client side javascript.In this article we are going to talk about client side javascript.In this article we are going to talk about client side javascript.
-    </p>
-    <p>
-      In this article we are going to talk about client side javascript.In this article we are going to talk about client side javascript.In this article we are going to talk about client side javascript.In this article we are going to talk about client side javascript.
-    </p>
-    <p>
-      In this article we are going to talk about client side javascript.In this article we are going to talk about client side javascript.In this article we are going to talk about client side javascript.In this article we are going to talk about client side javascript.
-    </p>
-    <p>
-      In this article we are going to talk about client side javascript.In this article we are going to talk about client side javascript.In this article we are going to talk about client side javascript.In this article we are going to talk about client side javascript.
-    </p>
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-    </p>
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-    </p>`
-   }
-
-};
 
 function createTemplate (data) {
   var title = data.title;
@@ -169,7 +91,7 @@ app.get('/articles/:articleName', function (req, res) {
 //  articleName == article-one
 //  articles[articleName] == {} content object for article-one
 
-  pool.query("SELECT * FROM article WHERE title = $1", [req.params.articleName], function (err, result) {
+  pool.query("SELECT * FROM article WHERE article_link = $1", [req.params.articleName], function (err, result) {
       if (err) {
           res.status(500).send(err.toString());
       } else {
