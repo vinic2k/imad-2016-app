@@ -25,7 +25,6 @@ button.onclick = function () {
 };
 
 // Submit name
-
 var submit = document.getElementById('submit_btn');
 submit.onclick = function (){
   // Create a request object
@@ -49,7 +48,6 @@ submit.onclick = function (){
     } 
     // Not done yet
   };
-  // Submit name
   var nameInput = document.getElementById('name');
   var name = nameInput.value;
   // Make the request
