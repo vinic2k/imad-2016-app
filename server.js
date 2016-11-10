@@ -219,16 +219,6 @@ app.get('/articles/:articleName', function (req, res) {
   });
 });
 
-var names = [];
-app.get('/submit-name', function (req, res) { // URL: /submit-name?name=Elliot
-    // Get the name from the request
-    var name = req.query.name;
-    
-    names.push(name);
-    
-    res.send(JSON.stringify(names));
-});
-
 
 app.get('/ui/:fileName', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', req.params.fileName));
