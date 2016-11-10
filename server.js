@@ -96,7 +96,7 @@ app.post('/create-user', function (req, res) {
 
 
 var pool = new Pool(config);
-To test the database connectivity
+//To test the database connectivity
 /*app.get('/test-db', function(req, res) {
    // Maka a select request
    // Return a response with the results
