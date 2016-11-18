@@ -27,7 +27,7 @@ function createTemplate (data) {
     var date = data.date;
     var heading = data.heading;
     var content = data.content;
-    
+
     var htmlTemplate = `
     <html>
       <head>
@@ -35,8 +35,9 @@ function createTemplate (data) {
               ${title}
           </title>
           <meta name="viewport" content="width=device-width, initial-scale=1" />
+          <link href="/ui/css/bootstrap.min.css" rel="stylesheet" />
           <link href="/ui/style.css" rel="stylesheet" />
-      </head> 
+      </head>
       <body>
           <div class="container">
               <div>
@@ -60,7 +61,9 @@ function createTemplate (data) {
                 <center>Loading comments...</center>
               </div>
           </div>
-          <script type="text/javascript" src="/ui/article.js"></script>
+          <script type="text/javascript" src="/ui/js/jquery-3.1.1.min.js"></script>
+          <script type="text/javascript" src="/ui/js/bootstrap.min.js"></script>
+          <script type="text/javascript" src="/ui/js/article.js"></script>
       </body>
     </html>
     `;
@@ -102,7 +105,7 @@ app.post('/create-user', function (req, res) {
 app.post('/login', function (req, res) {
    var username = req.body.username;
    var password = req.body.password;
-   
+
    pool.query('SELECT * FROM "user" WHERE username = $1', [username], function (err, result) {
       if (err) {
           res.status(500).send(err.toString());
@@ -115,15 +118,15 @@ app.post('/login', function (req, res) {
               var salt = dbString.split('$')[2];
               var hashedPassword = hash(password, salt); // Creating a hash based on the password submitted and the original salt
               if (hashedPassword === dbString) {
-                
+
                 // Set the session
                 req.session.auth = {userId: result.rows[0].id};
                 // set cookie with a session id
                 // internally, on the server side, it maps the session id to an object
                 // { auth: {userId }}
-                
+
                 res.send('credentials correct!');
-                
+
               } else {
                 res.status(403).send('username/password is invalid');
               }
@@ -139,7 +142,7 @@ app.get('/check-login', function (req, res) {
            if (err) {
               res.status(500).send(err.toString());
            } else {
-              res.send(result.rows[0].username);    
+              res.send(result.rows[0].username);
            }
        });
    } else {
@@ -203,7 +206,7 @@ app.post('/submit-comment/:articleName', function (req, res) {
                         });
                 }
             }
-       });     
+       });
     } else {
         res.status(403).send('Only logged in users can comment');
     }
@@ -228,6 +231,26 @@ app.get('/articles/:articleName', function (req, res) {
 
 app.get('/ui/:fileName', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', req.params.fileName));
+});
+
+app.get('/ui/css/:fileName', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui','css', req.params.fileName));
+});
+
+app.get('/ui/js/:fileName', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui','js', req.params.fileName));
+});
+
+app.get('/ui/images/:fileName', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui','images', req.params.fileName));
+});
+
+app.get('/ui/icons/:fileName', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui','icons', req.params.fileName));
+});
+
+app.get('/ui/fonts/:fileName', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui','fonts', req.params.fileName));
 });
 
 var port = 8080; // Use 8080 for local development because you might already have apache running on 80
