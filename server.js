@@ -62,7 +62,6 @@ function createTemplate (data) {
               </div>
           </div>
           <script type="text/javascript" src="/ui/js/jquery-3.1.1.min.js"></script>
-          <script type="text/javascript" src="/ui/js/bootstrap.min.js"></script>
           <script type="text/javascript" src="/ui/js/article.js"></script>
       </body>
     </html>
@@ -72,6 +71,10 @@ function createTemplate (data) {
 
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
+});
+
+app.get('/blog.html', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui', 'blog.html'));
 });
 
 function hash (input, salt) {
