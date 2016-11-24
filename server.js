@@ -29,40 +29,69 @@ function createTemplate (data) {
     var content = data.content;
 
     var htmlTemplate = `
+    <!doctype html>
     <html>
-      <head>
+        <head>
+          <meta charset="UTF-8">
+          <meta http-equiv="X-UA-Compatible" content="IE=edge">
+          <meta name="viewport" content="width=device-width, initial-scale=1">
+          <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+          <link href="/ui/style.css" rel="stylesheet" />
           <title>
               ${title}
           </title>
-          <meta name="viewport" content="width=device-width, initial-scale=1" />
-          <link href="/ui/css/bootstrap.min.css" rel="stylesheet" />
-          <link href="/ui/style.css" rel="stylesheet" />
       </head>
       <body>
+          <nav class="navbar navbar-inverse" role="navigation">
           <div class="container">
-              <div>
-                  <a href="/">Home</a>
-              </div>
-              <hr/>
-              <h3>
-                  ${heading}
-              </h3>
-              <div>
-                  ${date.toDateString()}
-              </div>
-              <div>
-                ${content}
-              </div>
-              <hr/>
-              <h4>Comments</h4>
-              <div id="comment_form">
-              </div>
-              <div id="comments">
-                <center>Loading comments...</center>
-              </div>
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="#">Vineesh KP
+              </a>
+            </div>
+            <!-- navbar-header -->
+            <div class="collapse navbar-collapse" id="collapse">
+              <ul class="nav navbar-nav navbar-right">
+                <li><a href="/">home</a></li>
+                <li><a href="#">about</a></li>
+                <li><a href="#">portfolio</a></li>
+                <li class="active"><a href="#">blog</a></li>
+                <li><a href="#">contact</a></li>
+              </ul>
+            </div>
+            <!-- collapse navbar-collapse -->
           </div>
-          <script type="text/javascript" src="/ui/js/jquery-3.1.1.min.js"></script>
-          <script type="text/javascript" src="/ui/js/article.js"></script>
+          <!-- container -->
+        </nav>
+        <div class="container">
+            <div>
+                <a href="/">Home</a>
+            </div>
+            <hr/>
+            <h3>
+                ${heading}
+            </h3>
+            <div>
+                ${date.toDateString()}
+            </div>
+            <div>
+              ${content}
+            </div>
+            <hr/>
+            <h4>Comments</h4>
+            <div id="comment_form">
+            </div>
+            <div id="comments">
+              <center>Loading comments...</center>
+            </div>
+        </div>
+        <script type="text/javascript" src="/ui/js/jquery-3.1.1.min.js"></script>
+        <script type="text/javascript" src="/ui/js/article.js"></script>
       </body>
     </html>
     `;
