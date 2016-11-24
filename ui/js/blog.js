@@ -5,12 +5,14 @@ function loadArticles () {
         if (request.readyState === XMLHttpRequest.DONE) {
             var articles = document.getElementById('articles');
             if (request.status === 200) {
-                var content = '<ul>';
+                var content = '<ul class="container">';
                 var articleData = JSON.parse(this.responseText);
                 for (var i=0; i< articleData.length; i++) {
                     content += `<li>
                     <a href="/articles/${articleData[i].link}">${articleData[i].heading}</a>
-                    (${articleData[i].date.split('T')[0]})</li>`;
+                    (${articleData[i].date.split('T')[0]})
+                    <br><p>${articleData[i].brief}</p>
+                    <br><a class="button" href="/articles/${articleData[i].link}">Read more</a></li>`;
                 }
                 content += "</ul>"
                 articles.innerHTML = content;

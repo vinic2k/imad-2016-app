@@ -1,6 +1,6 @@
 // Eg: vinic2k.imad.hasura-app.io/articles/article-one will result in article-one
 var currentArticleLink = window.location.pathname.split('/')[2];
- 
+
 function loadCommentForm () {
     var commentFormHtml = `
         <h5>Submit a comment</h5>
@@ -10,13 +10,13 @@ function loadCommentForm () {
         <br/>
         `;
     document.getElementById('comment_form').innerHTML = commentFormHtml;
-    
+
     // Submit username/password to login
     var submit = document.getElementById('submit');
     submit.onclick = function () {
         // Create a request object
         var request = new XMLHttpRequest();
-        
+
         // Capture the response and store it in a variable
         request.onreadystatechange = function () {
           if (request.readyState === XMLHttpRequest.DONE) {
@@ -24,21 +24,21 @@ function loadCommentForm () {
                 if (request.status === 200) {
                     // clear the form & reload all the comments
                     document.getElementById('comment_text').value = '';
-                    loadComments();    
+                    loadComments();
                 } else {
                     alert('Error! Could not submit comment');
                 }
                 submit.value = 'Submit';
           }
         };
-        
+
         // Make the request
         var comment = document.getElementById('comment_text').value;
         request.open('POST', '/submit-comment/' + currentArticleLink, true);
         request.setRequestHeader('Content-Type', 'application/json');
-        request.send(JSON.stringify({comment: comment}));  
+        request.send(JSON.stringify({comment: comment}));
         submit.value = 'Submitting...';
-        
+
     };
 }
 
@@ -52,7 +52,7 @@ function loadLogin () {
             }
         }
     };
-    
+
     request.open('GET', '/check-login', true);
     request.send(null);
 }
@@ -79,7 +79,7 @@ function loadComments () {
                     content += `<div class="comment">
                         <p>${escapeHTML(commentsData[i].comment)}</p>
                         <div class="commenter">
-                            ${commentsData[i].username} - ${time.toLocaleTimeString()} on ${time.toLocaleDateString()} 
+                            ${commentsData[i].full_name} - ${time.toLocaleTimeString()} on ${time.toLocaleDateString()}
                         </div>
                     </div>`;
                 }
@@ -89,7 +89,7 @@ function loadComments () {
             }
         }
     };
-    
+
     request.open('GET', '/get-comments/' + currentArticleLink, true);
     request.send(null);
 }
