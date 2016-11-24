@@ -12,7 +12,7 @@ function loadArticles () {
                     <a href="/articles/${articleData[i].link}">${articleData[i].heading}</a>
                     (${articleData[i].date.split('T')[0]})
                     <br><p>${articleData[i].brief}</p>
-                    <br><a class="button" href="/articles/${articleData[i].link}">Read more</a></li>`;
+                    <br><button class="btn btn-info" href="/articles/${articleData[i].link}">Read more</button></li>`;
                 }
                 content += "</ul>"
                 articles.innerHTML = content;
