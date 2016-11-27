@@ -36,7 +36,7 @@ function createTemplate (data) {
           <meta http-equiv="X-UA-Compatible" content="IE=edge">
           <meta name="viewport" content="width=device-width, initial-scale=1">
           <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-          <link href="/ui/style.css" rel="stylesheet" />
+          <link href="/ui/css/blog.css" rel="stylesheet" />
           <title>
               ${title}
           </title>
@@ -69,10 +69,6 @@ function createTemplate (data) {
           <!-- container -->
         </nav>
         <div class="container">
-            <div>
-                <a href="/">Home</a>
-            </div>
-            <hr/>
             <h3>
                 ${heading}
             </h3>
@@ -90,8 +86,8 @@ function createTemplate (data) {
               <center>Loading comments...</center>
             </div>
         </div>
-        <script type="text/javascript" src="/ui/js/jquery-3.1.1.min.js"></script>
-        <script type="text/javascript" src="/ui/js/article.js"></script>
+        <script src="https://code.jquery.com/jquery-3.1.0.js" integrity="sha256-slogkvB1K3VOkzAI8QITxV3VzpOnkeNVsKvtkYLMjfk=" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
       </body>
     </html>
     `;
