@@ -51,7 +51,7 @@ function createTemplate (data) {
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
               </button>
-              <a class="navbar-brand" href="#">Vineesh KP
+              <a class="navbar-brand" href="/">Vineesh KP
               </a>
             </div>
             <!-- navbar-header -->
