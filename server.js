@@ -139,6 +139,22 @@ function createTemplate (data) {
                                 </a>
                             </li>
                             <li>
+                                <a href="https://in.linkedin.com/in/vineesh-kp-ciph3r777">
+                                    <span class="fa-stack fa-lg">
+                                        <i class="fa fa-circle fa-stack-2x"></i>
+                                        <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
+                                    </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://dribbble.com/vineeshkp">
+                                    <span class="fa-stack fa-lg">
+                                        <i class="fa fa-circle fa-stack-2x"></i>
+                                        <i class="fa fa-dribbble fa-stack-1x fa-inverse"></i>
+                                    </span>
+                                </a>
+                            </li>
+                            <li>
                                 <a href="https://github.com/vinic2k">
                                     <span class="fa-stack fa-lg">
                                         <i class="fa fa-circle fa-stack-2x"></i>
@@ -147,7 +163,7 @@ function createTemplate (data) {
                                 </a>
                             </li>
                         </ul>
-                        <p class="copyright text-muted">Made with love by Vineesh KP</p>
+                        <center><p class="copyright text-muted">Made with <i class="fa fa-heart" aria-hidden="true"></i> by Vineesh KP</p></center>
                     </div>
                 </div>
             </div>
