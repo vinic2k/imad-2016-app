@@ -27,7 +27,7 @@ function createTemplate (data) {
     var date = data.date;
     var heading = data.heading;
     var content = data.content;
-
+    var image = data.image;
     var htmlTemplate = `
     <!doctype html>
     <html>
@@ -35,59 +35,129 @@ function createTemplate (data) {
           <meta charset="UTF-8">
           <meta http-equiv="X-UA-Compatible" content="IE=edge">
           <meta name="viewport" content="width=device-width, initial-scale=1">
-          <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-          <link href="/ui/css/blog.css" rel="stylesheet" />
+
           <title>
               ${title}
           </title>
+
+          <!-- Bootstrap CSS CDN -->
+          <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+          <!-- Custom CSS -->
+          <link href="/ui/css/blog.css" rel="stylesheet" />
+
+          <!-- Custom Fonts -->
+          <link href="/ui/css/font-awesome.css" rel="stylesheet" type="text/css">
+          <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+          <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+          <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+          <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+          <!--[if lt IE 9]>
+              <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+              <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+          <![endif]-->
+
       </head>
+
       <body>
           <nav class="navbar navbar-inverse" role="navigation">
-          <div class="container">
-            <div class="navbar-header">
-              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#collapse">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-              </button>
-              <a class="navbar-brand" href="/">Vineesh KP
-              </a>
-            </div>
-            <!-- navbar-header -->
-            <div class="collapse navbar-collapse" id="collapse">
-              <ul class="nav navbar-nav navbar-right">
-                <li><a href="/">home</a></li>
-                <li><a href="#">about</a></li>
-                <li><a href="#">portfolio</a></li>
-                <li class="active"><a href="#">blog</a></li>
-                <li><a href="#">contact</a></li>
-              </ul>
-            </div>
-            <!-- collapse navbar-collapse -->
-          </div>
-          <!-- container -->
+             <div class="container">
+                <div class="navbar-header">
+                   <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#collapse">
+                      <span class="sr-only">Toggle navigation</span>
+                      <span class="icon-bar"></span>
+                      <span class="icon-bar"></span>
+                      <span class="icon-bar"></span>
+                   </button>
+                   <a class="navbar-brand" href="/">Vineesh KP</a>
+              </div>
+              <!-- navbar-header -->
+              <div class="collapse navbar-collapse" id="collapse">
+                 <ul class="nav navbar-nav navbar-right">
+                    <li><a href="/">home</a></li>
+                    <li><a href="#">about</a></li>
+                    <li><a href="#">portfolio</a></li>
+                    <li class="active"><a href="/articles.html">blog</a></li>
+                    <li><a href="#">contact</a></li>
+                 </ul>
+              </div><!-- collapse navbar-collapse -->
+           </div><!-- container -->
         </nav>
-        <div class="container">
-            <h3>
-                ${heading}
-            </h3>
-            <div>
-                ${date.toDateString()}
+
+        <!-- Page Header -->
+        <header class="intro-header" style="background-image: url('/ui/images/${image}')">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                        <div class="post-heading">
+                            <h1>${heading}</h1>
+                            <span class="meta">Posted by  <a href="#">Vineesh KP</a> on ${date.toDateString()}</span>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div>
-              ${content}
+        </header>
+
+        <!-- Content -->
+        <article>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                        <p>${content}</p>
+                        <hr>
+                        <h2>Comments</h2>
+                        <div id="comment_form">
+                        </div>
+                        <div id="comments">
+                          <center>Loading comments...</center>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <hr/>
-            <h4>Comments</h4>
-            <div id="comment_form">
+        </article>
+
+        <!-- Footer -->
+        <footer>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                        <ul class="list-inline text-center">
+                            <li>
+                                <a href="https://twitter.com/imvini7">
+                                    <span class="fa-stack fa-lg">
+                                        <i class="fa fa-circle fa-stack-2x"></i>
+                                        <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                                    </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.facebook.com/vineeshkp777">
+                                    <span class="fa-stack fa-lg">
+                                        <i class="fa fa-circle fa-stack-2x"></i>
+                                        <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+                                    </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://github.com/vinic2k">
+                                    <span class="fa-stack fa-lg">
+                                        <i class="fa fa-circle fa-stack-2x"></i>
+                                        <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                                    </span>
+                                </a>
+                            </li>
+                        </ul>
+                        <p class="copyright text-muted">Made with love by Vineesh KP</p>
+                    </div>
+                </div>
             </div>
-            <div id="comments">
-              <center>Loading comments...</center>
-            </div>
-        </div>
+        </footer>
+        <!-- jQuery -->
         <script src="https://code.jquery.com/jquery-3.1.0.js" integrity="sha256-slogkvB1K3VOkzAI8QITxV3VzpOnkeNVsKvtkYLMjfk=" crossorigin="anonymous"></script>
+        <!-- Bootstrap JavaScript -->
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+        <!-- Custom JavaScript -->
+        <script type="text/javascript" src="/ui/js/article.js"></script>
       </body>
     </html>
     `;
