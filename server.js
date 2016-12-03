@@ -69,7 +69,7 @@ function createTemplate (data) {
                       <span class="icon-bar"></span>
                       <span class="icon-bar"></span>
                    </button>
-                    <a class="navbar-brand" rel="home" href="/" title="Welcome to my World!">
+                    <a class="navbar-brand" rel="home" href="/">
                       <img style="max-width:50px; margin-top: -7px;"
                         src="/ui/icons/logo.png">
                     </a>
