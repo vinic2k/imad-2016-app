@@ -48,6 +48,6 @@ hr.small {
   z-index: 3;
   font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
-.navbar-custom .navbar-brand {
+.navbar-custom {
   font-weight: 800;
 }
