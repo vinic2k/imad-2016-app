@@ -1,6 +1,3 @@
-.navbar {
-  margin-bottom: 0px;
-}
 
 function loadLoginForm () {
     var loginHtml = `
