@@ -269,6 +269,8 @@ footer {
 footer .list-inline {
   margin: 0;
   padding: 0;
+}footer .fa-heart {
+  color: #e82966 ;
 }
 .floating-label-form-group {
   font-size: 14px;
