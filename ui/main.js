@@ -5,8 +5,8 @@ function loadLoginForm () {
         <input type="text" id="username" placeholder="username" />
         <input type="password" id="password" placeholder="password" />
         <br/><br/>
-        <button class="btn btn-lg" id="login_btn">Login</button>
-        <button class="btn btn-lg" id="register_btn">Register</button>
+        <button class="btn btn-default btn-lg" id="login_btn">Login</button>
+        <button class="btn btn-default btn-lg" id="register_btn">Register</button>
         `;
     document.getElementById('login_area').innerHTML = loginHtml;
 
