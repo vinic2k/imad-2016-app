@@ -83,7 +83,23 @@
       <div id="login_area">
           <center>Loading login status...</center>
       </div>
+      <br>
+      <a id="modal_trigger" href="#modal" class="btn">Click here to Login or register</a>
       <hr/>
+      <div id="modal" class="popupContainer" style="display:none;">
+        <header class="popupHeader">
+    		<span class="header_title">Login</span>
+    		<span class="modal_close"><i class="fa fa-times"></i></span>
+    	</header>
+        <section class="popupBody">
+            <h3>Login/Register to unlock awesome features</h3>
+            <input type="text" id="username" placeholder="username" />
+            <input type="password" id="password" placeholder="password" />
+            <br/><br/>
+            <button class="btn btn-default btn-lg" id="login_btn">Login</button>
+            <button class="btn btn-default btn-lg" id="register_btn">Register</button>
+            </section>
+        </div>
     </div>
 
     <!-- Footer -->
