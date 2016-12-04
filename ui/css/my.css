@@ -390,3 +390,6 @@ img::-moz-selection {
 body {
   -webkit-tap-highlight-color: #0085A1;
 }
+.icon-bar {
+    color: #3f2e27;
+}
