@@ -44,6 +44,7 @@ function createTemplate (data) {
           <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
           <!-- Custom CSS -->
           <link href="/ui/css/blog.css" rel="stylesheet" />
+          <link href="/ui/css/my.css" rel="stylesheet" />
 
           <!-- Custom Fonts -->
           <link href="/ui/css/font-awesome.css" rel="stylesheet" type="text/css">
