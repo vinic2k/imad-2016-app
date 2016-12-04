@@ -1,13 +1,44 @@
 
 function loadLoginForm () {
     var loginHtml = `
-        <h3>Login/Register to unlock awesome features</h3>
-        <input type="text" id="username" placeholder="username" />
-        <input type="password" id="password" placeholder="password" />
-        <br/><br/>
-        <button class="btn btn-default btn-lg" id="login_btn">Login</button>
-        <button class="btn btn-default btn-lg" id="register_btn">Register</button>
-        `;
+    <div class="container">
+      <div class="row">
+        <section class="col-xs-12">
+    
+          <form class="form-horizontal">
+            <div class="form-group">
+              <label class="col-sm-2 control-label" for="inputName">username</label>
+              <div class="col-sm-10">
+                <input class="form-control" type="text" id="username" placeholder="username">
+              </div>
+            </div>
+    
+            <div class="form-group">
+              <label class="col-sm-2 control-label" for="inputPassword">password</label>
+              <div class="col-sm-10">
+                <input class="form-control" type="password" id="password" placeholder="password">      
+              </div>
+            </div>
+    
+    
+            <div class="form-group">
+              <div class="col-sm-10 col-sm-offset-2">
+                <input type="submit" id="login_btn" class="btn btn-default" value="Login">
+              </div>
+            </div>
+    
+            <div class="form-group">
+              <div class="col-sm-10 col-sm-offset-2">
+                <input type="submit" id="register_btn" class="btn btn-default" value="Register">
+              </div>
+            </div>
+    
+          </form>
+    
+        </section>
+      </div><!-- row -->   
+    </div><!-- content container -->
+                `;
     document.getElementById('login_area').innerHTML = loginHtml;
 
     // Submit username/password to login
