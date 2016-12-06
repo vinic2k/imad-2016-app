@@ -1,43 +1,21 @@
 
 function loadLoginForm () {
-    var loginHtml = `
-    <div class="container">
-      <div class="row">
-        <section class="col-xs-12">
-    
-          <form class="form-horizontal">
-            <div class="form-group">
-              <label class="col-sm-2 control-label" for="inputName">username</label>
-              <div class="col-sm-10">
-                <input class="form-control" type="text" id="username" placeholder="username">
-              </div>
+    var loginHtml = `<h3>Login/Register Here for Posting Comments on the Articles!</h3>
+        <div class="row control-group">
+            <div class="form-group col-xs-12 floating-label-form-group controls">
+              <label>Username</label>
+                <input type="text" class="form-control" id="username" placeholder="Enter Your Username" required>
             </div>
-    
-            <div class="form-group">
-              <label class="col-sm-2 control-label" for="inputPassword">password</label>
-              <div class="col-sm-10">
-                <input class="form-control" type="password" id="password" placeholder="password">      
-              </div>
+        </div>
+        <div class="row control-group">
+            <div class="form-group col-xs-12 floating-label-form-group controls">
+              <label>Password</label>
+                <input type="password" class="form-control" id="password" placeholder="Password" required>
             </div>
-    
-    
-            <div class="form-group">
-              <div class="col-sm-10 col-sm-offset-2">
-                <input type="submit" id="login_btn" class="btn btn-default" value="Login">
-              </div>
-            </div>
-    
-            <div class="form-group">
-              <div class="col-sm-10 col-sm-offset-2">
-                <input type="submit" id="register_btn" class="btn btn-default" value="Register">
-              </div>
-            </div>
-    
-          </form>
-    
-        </section>
-      </div><!-- row -->   
-    </div><!-- content container -->
+        </div>
+        <br/>
+        <input type="submit" class="btn btn-default" id="login_btn" value="Login" />
+        <input type="submit" class="btn btn-default" id="register_btn" value="Register" />
                 `;
     document.getElementById('login_area').innerHTML = loginHtml;
 
