@@ -82,7 +82,7 @@ function createTemplate (data) {
                     <li><a href="/about.html">about</a></li>
                     <li><a href="#">portfolio</a></li>
                     <li class="active"><a href="/articles.html">blog</a></li>
-                    <li><a href="#contact">contact</a></li>
+                    <li><a href="/contact.html">contact</a></li>
                  </ul>
               </div><!-- collapse navbar-collapse -->
            </div><!-- container -->
@@ -123,7 +123,7 @@ function createTemplate (data) {
         </article>
 
         <!-- Footer -->
-        <footer id="contact">
+        <footer>
             <div class="container">
                 <div class="row">
                     <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
@@ -197,6 +197,10 @@ app.get('/articles.html', function (req, res) {
 
 app.get('/about.html', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'about.html'));
+});
+
+app.get('/contact.html', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui', 'contact.html'));
 });
 
 function hash (input, salt) {
