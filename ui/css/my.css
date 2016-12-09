@@ -288,7 +288,7 @@ footer .list-inline {
   border: none;
   border-radius: 0;
   font-size: 1.5em;
-  background: none;
+  background: white;
   box-shadow: none !important;
   resize: none;
 }
