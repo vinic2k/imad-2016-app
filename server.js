@@ -80,7 +80,7 @@ function createTemplate (data) {
                  <ul class="nav navbar-nav navbar-right">
                     <li><a href="/">home</a></li>
                     <li><a href="/about.html">about</a></li>
-                    <li><a href="#">portfolio</a></li>
+                    <li><a href="/portfolio.html">portfolio</a></li>
                     <li class="active"><a href="/articles.html">blog</a></li>
                     <li><a href="/contact.html">contact</a></li>
                  </ul>
