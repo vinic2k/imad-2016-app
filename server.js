@@ -82,7 +82,7 @@ function createTemplate (data) {
                     <li><a href="#">about</a></li>
                     <li><a href="#">portfolio</a></li>
                     <li class="active"><a href="/articles.html">blog</a></li>
-                    <li><a href="#">contact</a></li>
+                    <li><a href="#contact">contact</a></li>
                  </ul>
               </div><!-- collapse navbar-collapse -->
            </div><!-- container -->
@@ -123,7 +123,7 @@ function createTemplate (data) {
         </article>
 
         <!-- Footer -->
-        <footer>
+        <footer id="contact">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
