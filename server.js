@@ -195,6 +195,10 @@ app.get('/articles.html', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'articles.html'));
 });
 
+app.get('/about.html', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui', 'about.html'));
+});
+
 function hash (input, salt) {
     // We need to create a hash
     var hashed = crypto.pbkdf2Sync(input, salt, 10000, 512, 'sha512');
